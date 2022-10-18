@@ -14,6 +14,13 @@ body{
 	flex-direction: column;
 }
 
+header{
+	height: 100%;
+	width: 100vw;
+	background: linear-gradient(45deg, #616df3, #39ffc0);
+	background-size: cover;
+}
+
 .contenu {
 	flex: 1 0 auto;
 }
