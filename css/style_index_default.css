@@ -9,16 +9,109 @@
 
 body{
 	background: #f1f1f1;
-	height: 100vh;
+	height: 100vw;
 	display: flex;
 	flex-direction: column;
 }
 
+/*Navbar*/
+
 header{
-	height: 100%;
-	width: 100vw;
+	width: 100%;
+	height: 10vw;
 	background: linear-gradient(45deg, #616df3, #39ffc0);
 	background-size: cover;
+}
+
+.logo{
+	width: auto;
+	height: 10vw;
+	padding: 10px;
+	
+}
+
+.logo img{
+	border-radius: 25px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.navMenu {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.navMenu a {
+  color: #f6f4e6;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 80px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #fddb3a;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #fddb3a;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(110px);
+  transform: translateX(110px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(200px);
+  transform: translateX(200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(285px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+/*Footer Part*/
+footer {
+  	flex-shrink: 0;
+	border-top: 1px dashed #000;
+	width: 100%;
+	background: #BABABA;
+	color: #333;
 }
 
 .contenu {
@@ -28,14 +121,6 @@ header{
 .contenu p {
 	padding: 5vw 10vw;
 	text-align: justify;
-}
-
-footer {
-  	flex-shrink: 0;
-	border-top: 1px dashed #000;
-	width: 100%;
-	background: #BABABA;
-	color: #333;
 }
 
 .contenu-footer {
