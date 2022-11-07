@@ -15,75 +15,122 @@ body{
 }
 
 /*Navbar*/
-header {
-  width: 100%;
-  height: 5vw;
-  background: linear-gradient(45deg, #616df3, #39ffc0);
-  background-size: cover;
+header{
+	width: 100%;
+	height: 5vw;
+	background: linear-gradient(45deg, #616df3, #39ffc0);
+	background-size: cover;
 }
 
 .logo {
-  width: 200px;
-  height: 5vw;
-  object-fit: contain;
-  padding: 10px;
-  border-radius: 25px;
+	width: 200px;
+	height: 5vw;
+	object-fit: contain;
+	padding: 10px;
+	border-radius: 25px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 .navMenu {
-  display: flex;
-  align-items: center;
+  	display: flex;
+	align-items: center;
 }
 
 .divMenu {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
+  	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
 }
 
 .divMenu a {
-  font-size: 1.2em;
-  font-weight: 500;
-  width: fit-content;
+	font-size: 1.2em;
+	font-weight: 500;
+	width: fit-content;
 
-  color: #f6f4e6;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
+	color: #f6f4e6;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
 
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  position: relative;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+	position: relative;
 }
 
 
-/*Animation*/
+/* Animations */
+/* 
+	Je t'ai laissée commenter ton ancienne animation si tu veux la reprendre, 
+	mais ne marche pas il faut réadapter et j'ai enlevée la <div class="dot"></div>
+*/
+	.divMenu a:after {
+		content: "";
+		position: absolute;
+		background-color: #fddb3a;
+		height: 3px;
+		width: 0;
+		left: 0;
+		bottom: -10px;
+		transition: 0.3s;
+	}
+	.divMenu a:hover::after { width: 100%; }
 
-.divMenu a:after {
-  content: "";
-  position: absolute;
-  background-color: #fddb3a;
-  height: 3px;
-  width: 0;
-  left: 0;
-  bottom: -10px;
-  transition: 0.3s;
-}
+	.divMenu a:hover::after,
+	.divMenu a.active::after /*this is it*/
+	{
+		width: 100%;
+	}
 
-.divMenu a:hover::after {
-  width: 100%;
-}
+	/* .divMenu .dot {
+		width: 6px;
+		height: 6px;
+		background: #fddb3a;
+		border-radius: 50%;
+		opacity: 0;
+		-webkit-transform: translateX(30px);
+		transform: translateX(30px);
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
 
-.divMenu a:hover::after, .divMenu a.active::after {
-  width: 100%;
-}
+	.divMenu a:nth-child(1):hover ~ .dot {
+		-webkit-transform: translateX(30px);
+		transform: translateX(30px);
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		opacity: 1;
+	}
 
+	.divMenu a:nth-child(2):hover ~ .dot {
+		-webkit-transform: translateX(110px);
+		transform: translateX(110px);
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		opacity: 1;
+	}
+
+	.divMenu a:nth-child(3):hover ~ .dot {
+		-webkit-transform: translateX(200px);
+		transform: translateX(200px);
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		opacity: 1;
+	}
+
+	.divMenu a:nth-child(4):hover ~ .dot {
+		-webkit-transform: translateX(285px);
+		transform: translateX(285px);
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		opacity: 1;
+	} */
+/* / Animations */
 
 /*Footer Part*/
 footer {
-  	flex-shrink: 0;
+	flex-shrink: 0;
 	border-top: 1px dashed #000;
 	width: 100%;
 	background: #BABABA;
