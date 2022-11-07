@@ -3,8 +3,8 @@
 <p>Content will be add soon.</p>
 <p>Content add (with date) :
 <li>
-<ul>Footer (1st October 2022)</ul>
-<ul>Header (17th October 2022 to ...)</ul>
-<ul>Video Player ()</ul>
+<ul>- Footer (1st October 2022)</ul>
+<ul>- Header (17th October 2022 to ...)</ul>
+<ul>- Video Player ()</ul>
 </li>
 </p>
