@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 *, ::before, ::after {
 	box-sizing: border-box;
 	margin: 0;
@@ -29,8 +31,6 @@ header{
 	padding: 10px;
 	border-radius: 25px;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 .navMenu {
   	display: flex;
@@ -72,7 +72,9 @@ header{
 	bottom: -10px;
 	transition: 0.3s;
 }
-.divMenu a:hover::after { width: 100%; }
+.divMenu a:hover::after {
+	width: 100%;
+}
 
 .divMenu a:hover::after, .divMenu a.active::after{
 	width: 100%;
@@ -81,6 +83,14 @@ header{
 /* End Animations */
 
 /* End Navbar */
+
+/* Main */
+
+.main{
+	color: #000;
+}
+
+/* End Main */
 
 /*Footer Part */
 footer {
